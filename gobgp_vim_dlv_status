@@ -1,0 +1,48 @@
+
+
+vim status
+===========
+
+1. gobgp v2
+
+(1) left pane
+/home/kyehwanl/project/gobgp_v2_running_test/src/github.com/osrg/gobgp/cmd/gobgp/neighbor.go: 523
+/home/kyehwanl/project/gobgp_v2_running_test/src/github.com/osrg/gobgp/internal/pkg/apiutil/attribute.go:87
+
+
+(2) right pane
+/home/kyehwanl/project/gobgp_v2_running_test/src/github.com/osrg/gobgp/internal/pkg/apiutil/attribute.go:719
+/home/kyehwanl/project/gobgp_v2_running_test/src/github.com/osrg/gobgp/pkg/packet/bgp/bgp.go:10011
+
+
+
+
+2. gobgp v1
+
+(1) left pane
+/home/kyehwanl/project/gowork/src/github.com/osrg/gobgp/gobgp/cmd/neighbor.go:414
+
+
+(2) right pane
+
+/home/kyehwanl/project/gowork/src/github.com/osrg/gobgp/gobgp/cmd/global.go:674
+
+
+
+
+
+
+
+3. break points in delve
+
+(1) server
+(dlv) bp
+Breakpoint runtime-fatal-throw at 0x436900 for runtime.fatalthrow() /usr/local/go/src/runtime/panic.go:1160 (0)
+Breakpoint unrecovered-panic at 0x436970 for runtime.fatalpanic() /usr/local/go/src/runtime/panic.go:1187 (0)
+    
+
+(2) client
+(dlv) bp
+Breakpoint 1 at 0xa8a0f2 for main.showNeighborRib() /home/kyehwanl/project/gobgp_v2_running_test/src/github.com/osrg/gobgp/cmd/gobgp/neighbor.go:874 (1)
+Breakpoint 2 at 0x95d928 for github.com/osrg/gobgp/internal/pkg/apiutil.GetNativePathAttributes() /home/kyehwanl/project/gobgp_v2_running_test/src/github.com/osrg/gobgp/internal/pkg/apiutil/util.go:107 (0)
+

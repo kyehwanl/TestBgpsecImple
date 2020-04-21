@@ -1,0 +1,29 @@
+
+
+Testing command
+===============
+
+0. Conditions
+
+  [kyehwanl@localhost bin]$ go version
+  go version go1.10.2 linux/amd64
+
+  [kyehwanl@localhost bin]$ env | grep GO
+  GOPATH=/home/kyehwanl/project/gobgp_v2_running_test
+
+  [kyehwanl@localhost bin]$ protoc --version
+  libprotoc 3.7.1
+
+
+  gobgp version == v1.17
+
+
+1. ns side
+  sudo ip netns exec ns1 bash --rcfile <(echo "PS1=\"ns1> \"")
+  /home/kyehwanl/project/QuaggaSRxSuite/_inst/sbin/bgpd -f /home/kyehwanl/project/bgpd.n2.conf.bgpsec
+
+
+2. gobgpd and gobgp side
+  ~project/gowork/bin}-> sudo ./gobgpd --log-level=debug -f ./gobgpd.conf.bgpsec -p
+  ~project/gowork/bin}-> gobgp global rib add bgpsec origin igp -a ipv4 25.18.22.0/24 nexthop 10.0.50.5
+

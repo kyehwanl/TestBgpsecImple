@@ -1,0 +1,151 @@
+
+How to command to run Gobgp, Exabgp experiments
+================================================
+
+
+0. configuration for network name space containters 
+---------------------------------------------------
+
+    (1) in case of only two nodes
+
+        ip netns add ns1
+        ip link add veth0 type veth peer name veth1
+        ip link set veth1 netns ns1
+        ip netns exec ns1 ifconfig lo up
+        ip netns exec ns1 ifconfig veth1 10.1.1.2/24 up
+        ifconfig veth0 10.1.1.1/24 up
+
+
+    (2) in case of more than three nodes, --> using linux bridge
+
+       +++ bridge configuration start
+       brctl addbr br1
+       brctl stp br1 off
+       ifconfig br1 10.1.1.1/24 up
+
+       +++ create network namespace nodes [0]
+       ip netns add ns0
+       ip link add veth0 type veth peer name veth1
+       ip link set veth1 netns ns0
+       ip netns exec ns0 ifconfig lo up
+       ip netns exec ns0 ifconfig veth1 10.1.1.2/24 up
+       brctl addif br1 veth0
+       ip link set dev veth0 up
+
+       +++ create network namespace nodes [1]
+       ip netns add ns1
+       ip link add veth2 type veth peer name veth3
+       ip link set veth3 netns ns1
+       ip netns exec ns1 ifconfig lo up
+       ip netns exec ns1 ifconfig veth3 10.1.1.3/24 up
+       brctl addif br1 veth2
+       ip link set dev veth2 up
+
+
+    (3) access ns node
+        ip netns exec ns0 bash --rcfile <(echo "PS1=\"ns0> \"")
+        ip netns exec ns1 bash --rcfile <(echo "PS1=\"ns1> \"")
+
+
+    (4) Add 179,2605 port into firewall
+        iptables -I INPUT 1 -p tcp --dport 179 -j ACCEPT
+
+
+
+1. Exabgp
+---------
+
+    $ pwd 
+    /home/kyehwanl/project/exabgp_test/exabgp.git
+
+    $ env exabgp.daemon.user=root ./sbin/exabgp ./bgpd.node1.conf
+    $ export PYTHONPATH=/home/kyehwanl/project/exabgp_test/exabgp.git/lib && python -m pdb /home/kyehwanl/project/exabgp_test/exabgp.git/lib/exabgp/application/bgp.py /home/kyehwanl/project/exabgp_test/exabgp.git/bgpd.node1.conf
+
+    
+    <for inter-ops Test>
+    $ env exabgp.daemon.user=root /home/kyehwanl/project/exabgp_test/exabgp.git/sbin/exabgp /home/kyehwanl/project/exabgp.ns0.conf
+
+
+2. Gobgp (v2.14)
+----------------
+
+    (1) gobgpd (server)
+
+    $ sudo -s
+    # ip netns exec ns1 bash --rcfile <(echo "PS1=\"ns1> \"")
+    ns1> sudo /home/kyehwanl/project/gobgp_v2_running_test/bin/gobgpd --log-level=debug -f /home/kyehwanl/project/gobgp_v2_running_test/bin/gobgpd.ns2.conf.bgpsec -p
+
+    <for inter-ops Test>
+    $ sudo /home/kyehwanl/project/gobgp_v2_running_test/bin/gobgpd --log-level=debug -f /home/kyehwanl/project/gobgpd.nsBase.conf -p
+    $ sudo /home/kyehwanl/project/gobgp_v2_running_test/bin/dlv exec /home/kyehwanl/project/gobgp_v2_running_test/bin/gobgpd -- -f /home/kyehwanl/project/gobgpd.nsBase.conf -p
+
+
+    (c.f) version 1.17
+    $ sudo /home/kyehwanl/project/gobgp_v2_running_test/bin/dlv --check-go-version=false exec ~/project/gowork/bin/gobgpd -- -f /home/kyehwanl/project/gobgpd.nsBase.conf -p
+
+
+    (2) gobgp (client)
+        - show rib table
+          $ cd project/gobgp_v2_running_test/bin
+          $ ./gobgp global rib
+
+        - inject bgpsec update
+          $ ./gobgp global rib add bgpsec -a ipv4 15.18.20.0/24 nexthop 10.0.50.5
+
+        - for debugging
+          $ dlv exec ./gobgp -- global rib add bgpsec origin igp -a ipv4 25.18.22.0/24 nexthop 10.0.50.5
+
+
+
+        (c.f) version 1.17
+          $ ~/project/gowork/bin/gobgp global rib add bgpsec -a ipv4 15.18.20.0/24 nexthop 10.0.50.5
+
+
+    (3) For Build & Compile
+    $ go install -ldflags="-r /home/kyehwanl/project/tools/go_srx_test" -gcflags='-N -l' ./...
+
+
+3. QuaggaSRx - v0.4.2.7
+------------
+
+    $ sudo /home/kyehwanl/project/QuaggaSRxSuite/_inst/sbin/bgpd -f /home/kyehwanl/project/bgpd.n2.conf.bgpsec
+
+
+    <for inter-ops Test>
+    $ sudo /home/kyehwanl/project/QuaggaSRxSuite/_inst/sbin/bgpd -f /home/kyehwanl/project/qsrx.ns1.conf
+
+
+4. SRxServer - v0.5.1.0
+------------
+
+    $ /home/kyehwanl/project/QuaggaSRxSuite/_inst/bin/srx_server
+
+
+    (c.f) SRxCryptoAPI - v3.0.0
+
+
+5. Key location
+---------------
+
+    /home/kyehwanl/project/srx_test1/keys
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
