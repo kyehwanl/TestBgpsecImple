@@ -1,7 +1,8 @@
 [global.config]
   as = 60001
   router-id = "10.1.1.1"
-  key-path = "/home/kyehwanl/project/srx_test1/keys/"
+  #key-path = "/home/kyehwanl/project/srx_test1/keys/"
+  key-path = "/var/lib/keyvolt/keys/"
 
 [global.apply-policy.config]
 #import-policy-list = ["rpki-valid", "bgpsec-invalid"]
