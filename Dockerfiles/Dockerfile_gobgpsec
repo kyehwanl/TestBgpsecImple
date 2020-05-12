@@ -1,6 +1,6 @@
 ############################################################
 # Dockerfile to build gobgp QuaggaSRx container images 
-# Based on CentOS 8
+# Based on CentOS 7
 ############################################################
 #FROM centos:latest
 FROM srxcryptoapi:latest
@@ -44,21 +44,22 @@ WORKDIR /root/bin
 #COPY gobgpd.conf gobgpd.conf
 VOLUME ["/root/bin"]
 
+ENV PATH /root/bin:/usr/local/go/bin:$PATH
 #ENTRYPOINT ["gobgpd", "-p"]
-#CMD ["-f", "gobgpd.conf", "--log-level=info"]
-CMD ["sleep", "infinity"]
+CMD ["gobgpd", "-p", "-f", "/etc/gobgpd.conf", "--log-level=info"]
+#CMD ["sleep", "infinity"]
 
 
 ############# DOCKER RUN command example #####################################
 # docker run --rm -ti -p 179:179 \ 
-#       -v $PWD/gobgpd.ns1.conf.bgpsec:/root/bin/gobgpd.conf \
+#       -v $PWD/gobgpd.ns1.conf.bgpsec:/etc/gobgpd.conf \
 #       -v $PWD/keys/:/var/lib/bgpsec-keys/ \
 #       gobgpsec /bin/bash
 #
 #(example)
-# docker run --rm -it -p 179:179 \
-#       -v /opt/project/TestBgpsecImple/gobgpd.ns1.conf.bgpsec:/root/bin/gobgpd.conf \
-#       -v /opt/project/srx_test1/keys:/var/lib/keyvolt/keys \
+# docker run --rm -it -p 179:179 [--network=host] \
+#       -v /opt/project/TestBgpsecImple/gobgpd.ns1.conf.bgpsec:/etc/gobgpd.conf \
+#       -v /opt/project/srx_test1/keys:/var/lib/bgpsec-keys \
 #       gobgpsec \
 #       ./gobgpd -f ./gobgpd.conf -p
 ##############################################################################
