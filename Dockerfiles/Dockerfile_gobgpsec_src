@@ -29,7 +29,7 @@ RUN mkdir -p ./src/github.com/osrg \
 
 # gobgp configuration
 WORKDIR /root/src/github.com/osrg/gobgp
-RUN export CGO_CFLAGS="-I/usr/include/srx" \
+RUN export CGO_CFLAGS="-I/usr/include/srx -I/include/srx" \
     && export CGO_LDFLAGS="-L/usr/lib64/srx -lSRxBGPSecOpenSSL -lSRxCryptoAPI -Wl,-rpath -Wl,/usr/lib64/srx" \
     && export GOPATH=/root \
     && export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin \
