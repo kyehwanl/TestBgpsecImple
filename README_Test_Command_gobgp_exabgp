@@ -55,6 +55,7 @@ How to command to run Gobgp, Exabgp experiments
 1. Exabgp
 ---------
 
+    (1) Run / Run with pdb
     $ pwd 
     /home/kyehwanl/project/exabgp_test/exabgp.git
 
@@ -62,8 +63,14 @@ How to command to run Gobgp, Exabgp experiments
     $ export PYTHONPATH=/home/kyehwanl/project/exabgp_test/exabgp.git/lib && python -m pdb /home/kyehwanl/project/exabgp_test/exabgp.git/lib/exabgp/application/bgp.py /home/kyehwanl/project/exabgp_test/exabgp.git/bgpd.node1.conf
 
     
-    <for inter-ops Test>
+    (2) for inter-ops Test
     $ env exabgp.daemon.user=root /home/kyehwanl/project/exabgp_test/exabgp.git/sbin/exabgp /home/kyehwanl/project/exabgp.ns0.conf
+
+    
+    (3) <Docker container case
+    docker run --rm -it -p 179:179 --network=host -v /opt/project/srx_test1/keys:/var/lib/bgpsec-keys -v /opt/project/TestBgpsecImple/exabgp.docker.conf:/etc/exabgp.conf exabgpsec_src
+
+
 
 
 2. Gobgp (v2.14)
@@ -103,6 +110,11 @@ How to command to run Gobgp, Exabgp experiments
 
     (3) For Build & Compile
     $ go install -ldflags="-r /home/kyehwanl/project/tools/go_srx_test" -gcflags='-N -l' ./...
+
+
+    (4) Docker Container case
+    docker run --rm -it -p 179:179 --network=host -v /opt/project/TestBgpsecImple/gobgpd.ns1.conf.bgpsec:/etc/gobgpd.conf -v /opt/project/srx_test1/keys:/var/lib/bgpsec-keys gobgpsec
+
 
 
 3. QuaggaSRx - v0.4.2.7
