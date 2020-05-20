@@ -61,7 +61,7 @@ CMD ["gobgpd", "-p", "-f", "/etc/gobgpd.conf", "--log-level=info"]
 #       -v /opt/project/TestBgpsecImple/gobgpd.ns1.conf.bgpsec:/etc/gobgpd.conf \
 #       -v /opt/project/srx_test1/keys:/var/lib/bgpsec-keys \
 #       gobgpsec \
-#       ./gobgpd -f ./gobgpd.conf -p
+#       [./gobgpd -f ./gobgpd.conf -p --log-level=info]
 ##############################################################################
 #
 #
