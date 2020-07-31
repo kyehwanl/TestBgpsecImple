@@ -1,0 +1,41 @@
+
+
+
+
+<GitLab repo>
+git clone https://gitlab.nist.gov/gitlab/antd/proj-ridr/bgp-srx/srx-crypto-api.git
+git clone https://gitlab.nist.gov/gitlab/antd/proj-ridr/bgp-srx/srx-server.git
+git clone https://gitlab.nist.gov/gitlab/antd/proj-ridr/bgp-srx/quagga-srx.git
+
+
+<GitHub repo>
+https://github.com/usnistgov/NIST-BGP-SRx
+
+
+<requirement libraries>
+yum -y install wget libconfig libconfig-devel openssl openssl-devel libcrypto.so.* telnet less gcc net-snmp readline-devel patch autoconf automake libtool git
+
+ - libconfig-devel:  
+    (Centos 8)
+    dnf --enablerepo=PowerTools install libconfig-devel
+
+ - UTHash 
+    (Centos 7)
+    wget https://download-ib01.fedoraproject.org/pub/epel/7/aarch64/Packages/u/uthash-devel-2.0.2-1.el7.noarch.rpm
+
+    rpm -Uvh uthash-devel-2.0.2-1.el7.noarch.rpm && rm -rf uthash-devel-2.0.2-1.el7.noarch.rpm
+
+    Or 
+    download latest rpm: http://download-ib01.fedoraproject.org/pub/epel/7/x86_64/
+    rpm -Uvh epel-release*rpm
+    yum install uthash-devel
+
+    Or
+    yum install epel-release
+    yum install uthash-devel
+
+
+
+    (Centos 8)
+    dnf --enablerepo=PowerTools install uthash-devel
+
