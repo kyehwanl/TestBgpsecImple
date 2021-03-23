@@ -67,11 +67,25 @@ services:
             - /opt/project/docker_test/bgpsecImples/keys:/var/lib/bgpsec-keys
         ports:
             - 1793:179
+        depends_on: 
+            - srxcryptoapi 
         privileged: true
         networks:
             bgp_net:
                 ipv4_address: 172.37.0.3
 
+    srxcryptoapi:
+        container_name: srxcryptoapi
+        image: srxcryptoapi_src
+        build: 
+            dockerfile: Dockerfile_srxcryptoapi_src
+            context: /opt/project/docker_test/
+        volumes: 
+            - /opt/project/docker_test/bgpsecImples/keys:/var/lib/bgpsec-keys
+            - /opt/project/docker_test/bgpsecImples/srxcryptoapi.conf:/etc/srxcryptoapi.conf
+        networks:
+            bgp_net:
+                ipv4_address: 172.37.0.200
 
 networks:
     bgp_net:
