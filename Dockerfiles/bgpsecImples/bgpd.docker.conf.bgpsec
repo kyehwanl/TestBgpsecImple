@@ -1,13 +1,13 @@
-hostname node2
+hostname node3
 password z
 
-router bgp 60002
-bgp router-id 10.1.1.2
+router bgp 60001
+bgp router-id 172.37.0.1
 srx bgpsec ski 0 1 C30433FA1975FF193181458FB902B501EA9789DC
 srx bgpsec active 0
 
-neighbor 10.1.1.1 remote-as 60001
-neighbor 10.1.1.1 bgpsec both
+neighbor 172.37.0.2 remote-as 60002
+neighbor 172.37.0.2 bgpsec both
 
 
 !network 200.0.0.0/8
@@ -16,7 +16,6 @@ neighbor 10.1.1.1 bgpsec both
 !network 20.0.30.0/25
 !network 20.0.30.0/26
 
-!srx connect node5 17900
 srx connect localhost 17900
 srx evaluation bgpsec
 srx evaluation bgpsec distributed
