@@ -1,0 +1,98 @@
+version: '3'
+services:
+    srx_server:
+        container_name: srx_server
+        image: srxsuite_src_github
+        build:
+            dockerfile: Dockerfile_srxsuite_src_github
+            context: /opt/project/docker_test/
+        volumes: 
+            - /opt/project/docker_test/bgpsecImples/keys:/var/lib/bgpsec-keys
+            - /opt/project/docker_test/bgpsecImples/srxcryptoapi.conf:/etc/srxcryptoapi.conf
+        ports:
+            - 17901:17901
+        depends_on: 
+            - gobgpsrx
+            - exabgpsrx
+        command:
+            srx_server
+        networks:
+            bgp_net:
+                ipv4_address: 172.37.0.100
+
+    quaggasrx:
+        container_name: quaggasrx
+        image: srxsuite_src_github
+        volumes: 
+            - /opt/project/docker_test/bgpsecImples/quaggasrx.docker.conf:/etc/quagga/bgpd.conf
+            - /opt/project/docker_test/bgpsecImples/keys:/var/lib/bgpsec-keys
+            - /opt/project/docker_test/bgpsecImples/srxcryptoapi.conf:/etc/srxcryptoapi.conf
+        ports:
+            - 1791:179
+            - 2605:2605
+        privileged: true
+        command:
+            bgpd -u root -f /etc/quagga/bgpd.conf
+        depends_on: 
+            - srx_server
+        networks:
+            bgp_net:
+                ipv4_address: 172.37.0.4
+
+    exabgpsrx:
+        container_name: exabgpsrx
+        image: exabgpsrx_src_github
+        build:
+            dockerfile: Dockerfile_exabgpsrx_src_github
+            context: /opt/project/docker_test/
+        volumes: 
+            - /opt/project/docker_test/bgpsecImples/exabgp.docker.conf:/etc/exabgp.conf 
+            - /opt/project/docker_test/bgpsecImples/keys:/var/lib/bgpsec-keys
+        ports:
+            - 1792:179
+        privileged: true
+        depends_on: 
+            - gobgpsrx
+        networks:
+            bgp_net:
+                ipv4_address: 172.37.0.2
+
+    gobgpsrx:
+        container_name: gobgpsrx
+        image: gobgpsrx_src_github
+        build:
+            dockerfile: Dockerfile_gobgpsrx_src_github
+            context: /opt/project/docker_test/
+        volumes: 
+            - /opt/project/docker_test/bgpsecImples/gobgpd.docker.conf:/etc/gobgpd.conf 
+            - /opt/project/docker_test/bgpsecImples/keys:/var/lib/bgpsec-keys
+        ports:
+            - 1793:179
+        depends_on: 
+            - srxcryptoapi 
+        privileged: true
+        networks:
+            bgp_net:
+                ipv4_address: 172.37.0.3
+
+    srxcryptoapi:
+        container_name: srxcryptoapi
+        image: srxcryptoapi_src_github
+        build: 
+            dockerfile: Dockerfile_srxcryptoapi_src_github
+            context: /opt/project/docker_test/
+        volumes: 
+            - /opt/project/docker_test/bgpsecImples/keys:/var/lib/bgpsec-keys
+            - /opt/project/docker_test/bgpsecImples/srxcryptoapi.conf:/etc/srxcryptoapi.conf
+        networks:
+            bgp_net:
+                ipv4_address: 172.37.0.200
+
+networks:
+    bgp_net:
+        ipam:
+            driver: default
+            config: 
+                - subnet: 172.37.0.0/16
+
+        

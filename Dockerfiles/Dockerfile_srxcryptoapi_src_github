@@ -11,11 +11,12 @@ ENV container docker
 ################## BEGIN INSTALLATION ######################
 RUN yum -y install epel-release 
 RUN yum -y install wget libconfig libconfig-devel openssl openssl-devel libcrypto.so.* telnet less gcc
-RUN yum -y install uthash-devel net-snmp readline-devel patch git net-snmp-config net-snmp-devel automake rpm-build
+RUN yum -y install uthash-devel net-snmp readline-devel patch git net-snmp-config net-snmp-devel automake rpm-build autoconf libtool
 
 # ut-hash configuration
 WORKDIR /root
-RUN git clone https://github.com/usnistgov/NIST-BGP-SRx.git
+#RUN git clone https://github.com/usnistgov/NIST-BGP-SRx.git
+RUN git clone https://github.com/kyehwanlee/TEST-BGP-SRx.git
 
 
 # KeyVolt configuration
@@ -25,7 +26,9 @@ VOLUME ["/var/lib/bgpsec-keys/"]
 
 # SRxCryptoAPI configuration
 
-WORKDIR /root/NIST-BGP-SRx/srx-crypto-api
+#WORKDIR /root/NIST-BGP-SRx/srx-crypto-api
+WORKDIR /root/TEST-BGP-SRx/srx-crypto-api
+RUN autoreconf -i
 RUN ./configure --prefix=/ CFLAGS="-O0 -g"
 RUN make all install 
 

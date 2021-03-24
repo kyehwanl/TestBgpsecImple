@@ -2,7 +2,7 @@
 # Dockerfile to build gobgp QuaggaSRx container images 
 # Based on CentOS 7
 ############################################################
-FROM centos:7
+FROM srxcryptoapi_src_github:latest
 MAINTAINER "Kyehwan Lee".
 ENV container docker
 
@@ -10,7 +10,7 @@ ENV container docker
 ################## BEGIN INSTALLATION ######################
 RUN yum -y install epel-release
 RUN yum -y install wget libconfig libconfig-devel openssl openssl-devel libcrypto.so.* telnet less gcc
-RUN yum -y install uthash-devel net-snmp readline-devel patch git net-snmp-config net-snmp-devel #automake rpm-build
+RUN yum -y install uthash-devel net-snmp readline-devel patch git net-snmp-config net-snmp-devel automake rpm-build autoconf libtool
 WORKDIR /root
 
 
@@ -22,17 +22,36 @@ VOLUME ["/var/lib/bgpsec-keys/"]
 # SRxServer configuration
 #
 WORKDIR /root
-RUN git clone https://github.com/usnistgov/NIST-BGP-SRx.git
+#RUN git clone https://github.com/usnistgov/NIST-BGP-SRx.git
+#RUN git clone https://github.com/kyehwanlee/TEST-BGP-SRx.git
 
-WORKDIR /root/NIST-BGP-SRx
+WORKDIR /root/TEST-BGP-SRx/srx-crypto-api
+RUN autoreconf -i
+WORKDIR /root/TEST-BGP-SRx/bgpsec-io
+RUN autoreconf -i
+WORKDIR /root/TEST-BGP-SRx/srx-server
+RUN autoreconf -i
+WORKDIR /root/TEST-BGP-SRx/quagga-srx
+RUN autoreconf -i
+#WORKDIR /root/NIST-BGP-SRx
+WORKDIR /root/TEST-BGP-SRx
 RUN ./buildBGP-SRx.sh -T -A
 
 
 # QuaggaSRx configuration
 #
-WORKDIR /root
+WORKDIR /root/TEST-BGP-SRx/srx-server
+RUN make install prefix=/usr
+WORKDIR /root/TEST-BGP-SRx/quagga-srx
+RUN make install prefix=/usr
+WORKDIR /root/TEST-BGP-SRx/srx-crypto-api
+RUN make install prefix=/usr
+WORKDIR /root/TEST-BGP-SRx/bgpsec-io
+RUN make install prefix=/usr
 
-EXPOSE 2605 179
+WORKDIR /root/TEST-BGP-SRx
+
+EXPOSE 2605 179 17900 17901
 #ENTRYPOINT ["bgpd", "-u", "root"]
 CMD ["sleep", "infinity"]
 

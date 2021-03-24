@@ -3,7 +3,7 @@
 # Based on CentOS 7
 ############################################################
 #FROM centos:latest
-FROM srxcryptoapi_src:latest
+FROM srxcryptoapi_src_github:latest
 MAINTAINER "Kyehwan Lee".
 ENV container docker
 
