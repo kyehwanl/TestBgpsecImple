@@ -76,7 +76,7 @@ services:
             - /opt/project/docker_test/test1/srxcryptoapi.conf:/etc/srxcryptoapi.conf
         ports:
             - 1792:179
-        command: sh -c "sleep 10 && bgpsecio -f /etc/bgpsecio.conf || bgpsecio -f /etc/bgpsecio.conf"
+        command: sh -c "sleep 10 && bgpsecio -f /etc/bgpsecio.conf"
         depends_on: 
             - quaggasrx
         networks:
@@ -90,8 +90,8 @@ services:
             - /opt/project/docker_test/test1/rpkirtr_svr.conf:/etc/rpkirtr_svr.conf
         ports:
             - 323:323
-        command: sh -c "rpkirtr_svr -f /etc/rpkirtr_svr.conf && sleep infinity"
-        privileged: true
+        command:
+            rpkirtr_svr -f /etc/rpkirtr_svr.conf
         networks:
             bgp_net:
                 ipv4_address: 172.37.0.101

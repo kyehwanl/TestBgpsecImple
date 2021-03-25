@@ -1,0 +1,723 @@
+execve("/usr/sbin/bgpd", ["bgpd", "-f", "/users/kyehwanl/srx_test1/node1/"...], [/* 16 vars */]) = 0
+brk(0)                                  = 0xb9232000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7681000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY)      = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=57398, ...}) = 0
+mmap2(NULL, 57398, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb7672000
+close(3)                                = 0
+open("/usr/lib/libzebra.so.0", O_RDONLY) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340\247\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=542668, ...}) = 0
+mmap2(NULL, 557512, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb75e9000
+mmap2(0xb7669000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x80) = 0xb7669000
+mmap2(0xb766e000, 12744, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb766e000
+close(3)                                = 0
+open("/lib/libm.so.6", O_RDONLY)        = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0pD@M4\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=206220, ...}) = 0
+mmap2(NULL, 168064, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb75bf000
+mmap2(0xb75e7000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28) = 0xb75e7000
+close(3)                                = 0
+open("/lib/libcrypt.so.1", O_RDONLY)    = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\260\370GA4\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=40232, ...}) = 0
+mmap2(NULL, 192828, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb758f000
+mmap2(0xb7596000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x7) = 0xb7596000
+mmap2(0xb7598000, 155964, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb7598000
+close(3)                                = 0
+open("/usr/lib/libSRxCryptoAPI.so.0", O_RDONLY) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\20\n\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=9228, ...}) = 0
+mmap2(NULL, 16196, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb758b000
+mmap2(0xb758d000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1) = 0xb758d000
+mmap2(0xb758e000, 3908, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb758e000
+close(3)                                = 0
+open("/usr/local/lib/libconfig.so.9", O_RDONLY) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\320\"\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=44352, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb758a000
+mmap2(NULL, 47156, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb757e000
+mmap2(0xb7589000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa) = 0xb7589000
+close(3)                                = 0
+open("/lib/libdl.so.2", O_RDONLY)       = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0`:9M4\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=19888, ...}) = 0
+mmap2(NULL, 16500, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb7579000
+mmap2(0xb757c000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2) = 0xb757c000
+close(3)                                = 0
+open("/lib/libpthread.so.0", O_RDONLY)  = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\240\3709M4\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=131648, ...}) = 0
+mmap2(NULL, 102908, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb755f000
+mmap2(0xb7575000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15) = 0xb7575000
+mmap2(0xb7577000, 4604, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb7577000
+close(3)                                = 0
+open("/lib/librt.so.1", O_RDONLY)       = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\200x;M4\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=42064, ...}) = 0
+mmap2(NULL, 33324, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb7556000
+mmap2(0xb755d000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6) = 0xb755d000
+close(3)                                = 0
+open("/lib/libgcc_s.so.1", O_RDONLY)    = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0000/\340N4\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=115328, ...}) = 0
+mmap2(NULL, 116560, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb7539000
+mmap2(0xb7555000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b) = 0xb7555000
+close(3)                                = 0
+open("/lib/libc.so.6", O_RDONLY)        = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0P\345!M4\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1858296, ...}) = 0
+mmap2(NULL, 1620552, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb73ad000
+mprotect(0xb7532000, 4096, PROT_NONE)   = 0
+mmap2(0xb7533000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x185) = 0xb7533000
+mmap2(0xb7536000, 10824, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb7536000
+close(3)                                = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb73ac000
+open("/lib/libfreebl3.so", O_RDONLY)    = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\220\372MA4\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=306492, ...}) = 0
+mmap2(NULL, 324940, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb735c000
+mmap2(0xb73a6000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x49) = 0xb73a6000
+mmap2(0xb73a8000, 13644, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb73a8000
+close(3)                                = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb735b000
+set_thread_area({entry_number:-1 -> 6, base_addr:0xb735b8d0, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+mprotect(0xb73a6000, 4096, PROT_READ)   = 0
+mprotect(0xb7533000, 8192, PROT_READ)   = 0
+mprotect(0xb755d000, 4096, PROT_READ)   = 0
+mprotect(0xb7575000, 4096, PROT_READ)   = 0
+mprotect(0xb757c000, 4096, PROT_READ)   = 0
+mprotect(0xb7596000, 4096, PROT_READ)   = 0
+mprotect(0xb75e7000, 4096, PROT_READ)   = 0
+mprotect(0xb75e9000, 524288, PROT_READ|PROT_WRITE) = 0
+mprotect(0xb75e9000, 524288, PROT_READ|PROT_EXEC) = 0
+mprotect(0xb76a3000, 806912, PROT_READ|PROT_WRITE) = 0
+mprotect(0xb76a3000, 806912, PROT_READ|PROT_EXEC) = 0
+mprotect(0xb76a1000, 4096, PROT_READ)   = 0
+munmap(0xb7672000, 57398)               = 0
+set_tid_address(0xb735b938)             = 18500
+set_robust_list(0xb735b940, 12)         = 0
+rt_sigaction(SIGRTMIN, {0xb7564350, [], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {0xb75643d0, [], SA_RESTART|SA_SIGINFO}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+getrlimit(RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM_INFINITY}) = 0
+uname({sys="Linux", node="node1.ex1-test.bgp-srx.emulab.antd.nist.gov", ...}) = 0
+umask(027)                              = 022
+brk(0)                                  = 0xb9232000
+brk(0xb9253000)                         = 0xb9253000
+brk(0)                                  = 0xb9253000
+socket(PF_FILE, SOCK_DGRAM|SOCK_CLOEXEC, 0) = 3
+connect(3, {sa_family=AF_FILE, sun_path="/dev/log"}, 110) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 187668089}) = 0
+time(NULL)                              = 1418465025
+rt_sigaction(SIGQUIT, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGQUIT, {0xb76216ce, ~[RTMIN RT_1], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGILL, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGILL, {0xb76216ce, ~[RTMIN RT_1], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGFPE, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGFPE, {0xb76216ce, ~[RTMIN RT_1], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGBUS, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGBUS, {0xb76216ce, ~[RTMIN RT_1], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGSEGV, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGSEGV, {0xb76216ce, ~[RTMIN RT_1], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGSYS, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGSYS, {0xb76216ce, ~[RTMIN RT_1], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGXCPU, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGXCPU, {0xb76216ce, ~[RTMIN RT_1], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGXFSZ, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGXFSZ, {0xb76216ce, ~[RTMIN RT_1], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGHUP, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGHUP, {0xb7621693, ~[RTMIN RT_1], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGINT, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGINT, {0xb7621693, ~[RTMIN RT_1], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGALRM, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGALRM, {0xb7621693, ~[RTMIN RT_1], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGTERM, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGTERM, {0xb7621693, ~[RTMIN RT_1], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGUSR1, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGUSR1, {0xb7621693, ~[RTMIN RT_1], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGUSR2, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGUSR2, {0xb7621693, ~[RTMIN RT_1], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGIO, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGIO, {0xb7621693, ~[RTMIN RT_1], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGVTALRM, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGVTALRM, {0xb7621693, ~[RTMIN RT_1], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGSTKFLT, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGSTKFLT, {0xb7621693, ~[RTMIN RT_1], SA_SIGINFO}, NULL, 8) = 0
+rt_sigaction(SIGPIPE, NULL, {SIG_DFL, [], 0}, 8) = 0
+rt_sigaction(SIGPIPE, {SIG_IGN, ~[RTMIN RT_1], 0}, NULL, 8) = 0
+rt_sigaction(SIGHUP, {0xb76214d4, ~[RTMIN RT_1], SA_RESTART}, {0xb7621693, ~[KILL STOP RTMIN RT_1], SA_SIGINFO}, 8) = 0
+rt_sigaction(SIGUSR1, {0xb76214d4, ~[RTMIN RT_1], SA_RESTART}, {0xb7621693, ~[KILL STOP RTMIN RT_1], SA_SIGINFO}, 8) = 0
+rt_sigaction(SIGINT, {0xb76214d4, ~[RTMIN RT_1], SA_RESTART}, {0xb7621693, ~[KILL STOP RTMIN RT_1], SA_SIGINFO}, 8) = 0
+rt_sigaction(SIGTERM, {0xb76214d4, ~[RTMIN RT_1], SA_RESTART}, {0xb7621693, ~[KILL STOP RTMIN RT_1], SA_SIGINFO}, 8) = 0
+socket(PF_FILE, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+connect(4, {sa_family=AF_FILE, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+socket(PF_FILE, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+connect(4, {sa_family=AF_FILE, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+open("/etc/nsswitch.conf", O_RDONLY)    = 4
+fstat64(4, {st_mode=S_IFREG|0644, st_size=1688, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7680000
+read(4, "#\n# /etc/nsswitch.conf\n#\n# An ex"..., 4096) = 1688
+read(4, "", 4096)                       = 0
+close(4)                                = 0
+munmap(0xb7680000, 4096)                = 0
+open("/etc/ld.so.cache", O_RDONLY)      = 4
+fstat64(4, {st_mode=S_IFREG|0644, st_size=57398, ...}) = 0
+mmap2(NULL, 57398, PROT_READ, MAP_PRIVATE, 4, 0) = 0xb7672000
+close(4)                                = 0
+open("/lib/libnss_files.so.2", O_RDONLY) = 4
+read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0p\32\0\0004\0\0\0"..., 512) = 512
+fstat64(4, {st_mode=S_IFREG|0755, st_size=54496, ...}) = 0
+mmap2(NULL, 49860, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0xb734e000
+mmap2(0xb7359000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0xa) = 0xb7359000
+close(4)                                = 0
+mprotect(0xb7359000, 4096, PROT_READ)   = 0
+munmap(0xb7672000, 57398)               = 0
+open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 4
+fstat64(4, {st_mode=S_IFREG|0644, st_size=1306, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7680000
+read(4, "root:x:0:0:root:/root:/bin/bash\n"..., 4096) = 1306
+close(4)                                = 0
+munmap(0xb7680000, 4096)                = 0
+socket(PF_FILE, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+connect(4, {sa_family=AF_FILE, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+socket(PF_FILE, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+connect(4, {sa_family=AF_FILE, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+open("/etc/group", O_RDONLY|O_CLOEXEC)  = 4
+fstat64(4, {st_mode=S_IFREG|0644, st_size=609, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7680000
+read(4, "root:x:0:root,kyehwanl\nbin:x:1:r"..., 4096) = 609
+close(4)                                = 0
+munmap(0xb7680000, 4096)                = 0
+setregid32(0, 0)                        = 0
+geteuid32()                             = 0
+time(NULL)                              = 1418465025
+getcwd("/users/kyehwanl/proj-bgp/extras/srxcryptoapi/keys/C3/0433", 4096) = 58
+brk(0)                                  = 0xb9253000
+brk(0xb9274000)                         = 0xb9274000
+brk(0)                                  = 0xb9274000
+brk(0xb9295000)                         = 0xb9295000
+mmap2(NULL, 135168, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb732d000
+mmap2(NULL, 135168, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb730c000
+open("/etc//srxcryptoapi.conf", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("./srxcryptoapi.conf", O_RDONLY)   = -1 ENOENT (No such file or directory)
+brk(0)                                  = 0xb9295000
+brk(0xb92b6000)                         = 0xb92b6000
+brk(0)                                  = 0xb92b6000
+brk(0xb92d7000)                         = 0xb92d7000
+brk(0)                                  = 0xb92d7000
+brk(0xb92f8000)                         = 0xb92f8000
+mknod("/tmp/my_fifo", S_IFIFO|0644)     = -1 EEXIST (File exists)
+open("/tmp/my_fifo", O_RDWR|O_LARGEFILE) = 4
+clock_gettime(CLOCK_MONOTONIC, {4034145, 195025420}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 195051814}) = 0
+brk(0)                                  = 0xb92f8000
+brk(0xb9319000)                         = 0xb9319000
+open("/proc/meminfo", O_RDONLY)         = 5
+fstat64(5, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7680000
+read(5, "MemTotal:       12430188 kB\nMemF"..., 1024) = 1024
+close(5)                                = 0
+munmap(0xb7680000, 4096)                = 0
+open("/users/kyehwanl/srx_test1/node1/bgpd.conf", O_RDONLY|O_LARGEFILE) = 5
+fstat64(5, {st_mode=S_IFREG|0644, st_size=1294, ...}) = 0
+mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb767f000
+read(5, "hostname node1\npassword zebra\nlo"..., 8192) = 1294
+getcwd("/users/kyehwanl/proj-bgp/extras/srxcryptoapi/keys/C3/0433", 4096) = 58
+umask(0133)                             = 027
+open("/users/kyehwanl/proj-bgp/extras/srxcryptoapi/keys/C3/0433/node1/bgpd.log", O_WRONLY|O_CREAT|O_APPEND|O_LARGEFILE, 0666) = -1 ENOENT (No such file or directory)
+umask(027)                              = 0133
+socket(PF_FILE, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 6
+connect(6, {sa_family=AF_FILE, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(6)                                = 0
+socket(PF_FILE, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 6
+connect(6, {sa_family=AF_FILE, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(6)                                = 0
+open("/etc/services", O_RDONLY|O_CLOEXEC) = 6
+fstat64(6, {st_mode=S_IFREG|0644, st_size=655099, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb767e000
+read(6, "# /etc/services:\n# $Id: services"..., 4096) = 4096
+read(6, "ervice\nfinger          79/tcp\nfi"..., 4096) = 4096
+close(6)                                = 0
+munmap(0xb767e000, 4096)                = 0
+socket(PF_NETLINK, SOCK_RAW, 0)         = 6
+bind(6, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 0
+getsockname(6, {sa_family=AF_NETLINK, pid=18500, groups=00000000}, [12]) = 0
+time(NULL)                              = 1418465025
+sendto(6, "\24\0\0\0\26\0\1\3\1\17\214T\0\0\0\0\0\0\0\0", 20, 0, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 20
+recvmsg(6, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"0\0\0\0\24\0\2\0\1\17\214TDH\0\0\2\10\200\376\1\0\0\0\10\0\1\0\177\0\0\1"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 168
+recvmsg(6, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"@\0\0\0\24\0\2\0\1\17\214TDH\0\0\n\200\200\376\1\0\0\0\24\0\1\0\0\0\0\0"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 192
+recvmsg(6, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"\24\0\0\0\3\0\2\0\1\17\214TDH\0\0\0\0\0\0", 4096}], msg_controllen=0, msg_flags=0}, 0) = 20
+close(6)                                = 0
+open("/etc/gai.conf", O_RDONLY)         = -1 ENOENT (No such file or directory)
+futex(0xb7536d78, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+socket(PF_INET6, SOCK_DGRAM, IPPROTO_IP) = 6
+connect(6, {sa_family=AF_INET6, sin6_port=htons(179), inet_pton(AF_INET6, "::", &sin6_addr), sin6_flowinfo=0, sin6_scope_id=0}, 28) = 0
+getsockname(6, {sa_family=AF_INET6, sin6_port=htons(46968), inet_pton(AF_INET6, "::1", &sin6_addr), sin6_flowinfo=0, sin6_scope_id=0}, [28]) = 0
+connect(6, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+connect(6, {sa_family=AF_INET, sin_port=htons(179), sin_addr=inet_addr("0.0.0.0")}, 16) = 0
+getsockname(6, {sa_family=AF_INET6, sin6_port=htons(57589), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_flowinfo=0, sin6_scope_id=0}, [28]) = 0
+close(6)                                = 0
+socket(PF_INET, SOCK_STREAM, IPPROTO_TCP) = 6
+setsockopt(6, SOL_IP, IP_TTL, [255], 4) = 0
+setsockopt(6, SOL_SOCKET, SO_REUSEADDR, [1], 4) = 0
+setresuid32(-1, 0, -1)                  = 0
+setsockopt(6, SOL_IP, IP_TOS, [192], 4) = 0
+bind(6, {sa_family=AF_INET, sin_port=htons(179), sin_addr=inet_addr("0.0.0.0")}, 16) = 0
+setresuid32(-1, 0, -1)                  = 0
+listen(6, 3)                            = 0
+socket(PF_INET6, SOCK_STREAM, IPPROTO_TCP) = 7
+setsockopt(7, SOL_IPV6, IPV6_UNICAST_HOPS, [255], 4) = 0
+setsockopt(7, SOL_SOCKET, SO_REUSEADDR, [1], 4) = 0
+setresuid32(-1, 0, -1)                  = 0
+setsockopt(7, SOL_IPV6, 0x43 /* IPV6_??? */, [192], 4) = 0
+setsockopt(7, SOL_IPV6, IPV6_V6ONLY, [1], 4) = 0
+bind(7, {sa_family=AF_INET6, sin6_port=htons(179), inet_pton(AF_INET6, "::", &sin6_addr), sin6_flowinfo=0, sin6_scope_id=0}, 28) = 0
+setresuid32(-1, 0, -1)                  = 0
+listen(7, 3)                            = 0
+brk(0)                                  = 0xb9319000
+brk(0xb933a000)                         = 0xb933a000
+open("/etc/services", O_RDONLY|O_CLOEXEC) = 8
+fstat64(8, {st_mode=S_IFREG|0644, st_size=655099, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb767e000
+read(8, "# /etc/services:\n# $Id: services"..., 4096) = 4096
+read(8, "ervice\nfinger          79/tcp\nfi"..., 4096) = 4096
+close(8)                                = 0
+munmap(0xb767e000, 4096)                = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 201366586}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 201391862}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 201780787}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 201805508}) = 0
+read(5, "", 8192)                       = 0
+writev(0, [{"can't open logfile node1/bgpd.lo"..., 34}], 1) = 34
+close(5)                                = 0
+munmap(0xb767f000, 8192)                = 0
+umask(0133)                             = 027
+open("/usr/etc/bgpd.pid", O_RDWR|O_CREAT|O_LARGEFILE, 0644) = 5
+umask(027)                              = 0133
+fcntl64(5, F_SETLK64, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}, 0xbfab6708) = 0
+write(5, "18500\n", 6)                  = 6
+ftruncate64(5, 6)                       = 0
+socket(PF_NETLINK, SOCK_RAW, 0)         = 8
+bind(8, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 0
+getsockname(8, {sa_family=AF_NETLINK, pid=18500, groups=00000000}, [12]) = 0
+time(NULL)                              = 1418465025
+sendto(8, "\24\0\0\0\26\0\1\3\1\17\214T\0\0\0\0\0\0\0\0", 20, 0, {sa_family=AF_NETLINK, pid=0, groups=00000000}, 12) = 20
+recvmsg(8, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"0\0\0\0\24\0\2\0\1\17\214TDH\0\0\2\10\200\376\1\0\0\0\10\0\1\0\177\0\0\1"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 168
+recvmsg(8, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"@\0\0\0\24\0\2\0\1\17\214TDH\0\0\n\200\200\376\1\0\0\0\24\0\1\0\0\0\0\0"..., 4096}], msg_controllen=0, msg_flags=0}, 0) = 192
+recvmsg(8, {msg_name(12)={sa_family=AF_NETLINK, pid=0, groups=00000000}, msg_iov(1)=[{"\24\0\0\0\3\0\2\0\1\17\214TDH\0\0\0\0\0\0", 4096}], msg_controllen=0, msg_flags=0}, 0) = 20
+close(8)                                = 0
+socket(PF_INET6, SOCK_DGRAM, IPPROTO_IP) = 8
+connect(8, {sa_family=AF_INET6, sin6_port=htons(2605), inet_pton(AF_INET6, "::", &sin6_addr), sin6_flowinfo=0, sin6_scope_id=0}, 28) = 0
+getsockname(8, {sa_family=AF_INET6, sin6_port=htons(39971), inet_pton(AF_INET6, "::1", &sin6_addr), sin6_flowinfo=0, sin6_scope_id=0}, [28]) = 0
+connect(8, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+connect(8, {sa_family=AF_INET, sin_port=htons(2605), sin_addr=inet_addr("0.0.0.0")}, 16) = 0
+getsockname(8, {sa_family=AF_INET6, sin6_port=htons(37648), inet_pton(AF_INET6, "::ffff:127.0.0.1", &sin6_addr), sin6_flowinfo=0, sin6_scope_id=0}, [28]) = 0
+close(8)                                = 0
+socket(PF_INET, SOCK_STREAM, IPPROTO_TCP) = 8
+setsockopt(8, SOL_SOCKET, SO_REUSEADDR, [1], 4) = 0
+bind(8, {sa_family=AF_INET, sin_port=htons(2605), sin_addr=inet_addr("0.0.0.0")}, 16) = 0
+listen(8, 3)                            = 0
+socket(PF_INET6, SOCK_STREAM, IPPROTO_TCP) = 9
+setsockopt(9, SOL_IPV6, IPV6_V6ONLY, [1], 4) = 0
+setsockopt(9, SOL_SOCKET, SO_REUSEADDR, [1], 4) = 0
+bind(9, {sa_family=AF_INET6, sin6_port=htons(2605), inet_pton(AF_INET6, "::", &sin6_addr), sin6_flowinfo=0, sin6_scope_id=0}, 28) = 0
+listen(9, 3)                            = 0
+gettimeofday({1418465025, 931362}, NULL) = 0
+open("/etc/localtime", O_RDONLY)        = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=2427, ...}) = 0
+fstat64(10, {st_mode=S_IFREG|0644, st_size=2427, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7680000
+read(10, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\4\0\0\0\4\0\0\0\0"..., 4096) = 2427
+_llseek(10, -24, [2403], SEEK_CUR)      = 0
+read(10, "\nMST7MDT,M3.2.0,M11.1.0\n", 4096) = 24
+_llseek(10, 2426, [2426], SEEK_SET)     = 0
+close(10)                               = 0
+munmap(0xb7680000, 4096)                = 0
+fstat64(1, {st_mode=S_IFREG|0644, st_size=23430, ...}) = 0
+mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb767f000
+write(1, "2014/12/13 03:03:45 BGP: BGPd (+"..., 792014/12/13 03:03:45 BGP: BGPd (+SRx) 0.4.1.0 starting: vty@2605, bgp@<all>:179
+) = 79
+select(1024, [4 6 7 8 9], [], [], {0, 0}) = 0 (Timeout)
+clock_gettime(CLOCK_MONOTONIC, {4034145, 207682950}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 207751304}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 5999}, ru_stime={0, 4999}, ...}) = 0
+gettimeofday({1418465025, 936026}, NULL) = 0
+socket(PF_FILE, SOCK_STREAM, 0)         = 10
+connect(10, {sa_family=AF_FILE, sun_path="/usr/etc/zserv.api"}, 20) = -1 ENOENT (No such file or directory)
+close(10)                               = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 207979515}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 208133777}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 5999}, ru_stime={0, 5999}, ...}) = 0
+gettimeofday({1418465025, 936417}, NULL) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 208264273}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 5999}, ru_stime={0, 5999}, ...}) = 0
+gettimeofday({1418465025, 936525}, NULL) = 0
+socket(PF_FILE, SOCK_DGRAM, 0)          = 10
+bind(10, {sa_family=AF_FILE, sun_path=@"srx"}, 110) = 0
+socket(PF_FILE, SOCK_DGRAM, 0)          = 11
+bind(11, {sa_family=AF_FILE, sun_path=@"srxRecv"}, 110) = 0
+gettimeofday({1418465025, 936676}, NULL) = 0
+write(1, "2014/12/13 03:03:45 BGP: Request"..., 582014/12/13 03:03:45 BGP: Request to connect to SRx server
+) = 58
+open("/etc/resolv.conf", O_RDONLY)      = 12
+fstat64(12, {st_mode=S_IFREG|0644, st_size=87, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb767e000
+read(12, "; generated by /sbin/dhclient-sc"..., 4096) = 87
+read(12, "", 4096)                      = 0
+close(12)                               = 0
+munmap(0xb767e000, 4096)                = 0
+socket(PF_FILE, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 12
+connect(12, {sa_family=AF_FILE, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(12)                               = 0
+socket(PF_FILE, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 12
+connect(12, {sa_family=AF_FILE, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(12)                               = 0
+open("/etc/host.conf", O_RDONLY)        = 12
+fstat64(12, {st_mode=S_IFREG|0644, st_size=9, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb767e000
+read(12, "multi on\n", 4096)            = 9
+read(12, "", 4096)                      = 0
+close(12)                               = 0
+munmap(0xb767e000, 4096)                = 0
+futex(0xb7537be0, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+open("/etc/hosts", O_RDONLY|O_CLOEXEC)  = 12
+fstat64(12, {st_mode=S_IFREG|0664, st_size=348, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb767e000
+read(12, "127.0.0.1\tlocalhost loghost loca"..., 4096) = 348
+read(12, "", 4096)                      = 0
+close(12)                               = 0
+munmap(0xb767e000, 4096)                = 0
+socket(PF_INET, SOCK_STREAM, IPPROTO_IP) = 12
+connect(12, {sa_family=AF_INET, sin_port=htons(17900), sin_addr=inet_addr("10.1.1.6")}, 16) = 0
+time(NULL)                              = 1418465025
+time(NULL)                              = 1418465025
+send(12, "\0\0\1\0\0\0\0\24\n\1\1\2\0\0\352b\0\0\0\0", 20, MSG_WAITALL|MSG_NOSIGNAL) = 20
+time(NULL)                              = 1418465025
+alarm(0)                                = 0
+rt_sigaction(SIGALRM, {0xb76fe950, [ALRM], SA_RESTART}, {0xb7621693, ~[KILL STOP RTMIN RT_1], SA_SIGINFO}, 8) = 0
+alarm(30)                               = 0
+time(NULL)                              = 1418465025
+recv(12, "\1\0\1\0\0\0\0\f", 8, MSG_WAITALL|MSG_NOSIGNAL) = 8
+time(NULL)                              = 1418465025
+time(NULL)                              = 1418465025
+recv(12, "\n\1\1\2", 4, MSG_WAITALL|MSG_NOSIGNAL) = 4
+time(NULL)                              = 1418465025
+time(NULL)                              = 1418465025
+time(NULL)                              = 1418465025
+alarm(0)                                = 30
+rt_sigaction(SIGALRM, {0xb7621693, [ALRM], SA_RESTART}, {0xb76fe950, [ALRM], SA_RESTART}, 8) = 0
+alarm(0)                                = 0
+time(NULL)                              = 1418465025
+fcntl64(12, F_GETFL)                    = 0x2 (flags O_RDWR)
+fcntl64(12, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+gettimeofday({1418465025, 941253}, NULL) = 0
+write(1, "2014/12/13 03:03:45 BGP: Connect"..., 592014/12/13 03:03:45 BGP: Connect to SRx server node5:17900
+) = 59
+gettimeofday({1418465025, 943186}, NULL) = 0
+write(1, "2014/12/13 03:03:45 BGP: Connect"..., 602014/12/13 03:03:45 BGP: Connection to SRx-server succeeded
+) = 60
+clock_gettime(CLOCK_MONOTONIC, {4034145, 217206205}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 6998}, ru_stime={0, 5999}, ...}) = 0
+gettimeofday({1418465025, 945770}, NULL) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 217650792}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 6998}, ru_stime={0, 5999}, ...}) = 0
+gettimeofday({1418465025, 945980}, NULL) = 0
+socket(PF_FILE, SOCK_STREAM, 0)         = 13
+connect(13, {sa_family=AF_FILE, sun_path="/usr/etc/zserv.api"}, 20) = -1 ENOENT (No such file or directory)
+close(13)                               = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 218034218}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 6998}, ru_stime={0, 5999}, ...}) = 0
+gettimeofday({1418465025, 946355}, NULL) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 218191399}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 6998}, ru_stime={0, 5999}, ...}) = 0
+gettimeofday({1418465025, 946455}, NULL) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 218294824}) = 0
+gettimeofday({1418465025, 946530}, NULL) = 0
+write(1, "2014/12/13 03:03:45 BGP: Import "..., 472014/12/13 03:03:45 BGP: Import timer expired.
+) = 47
+clock_gettime(CLOCK_MONOTONIC, {4034145, 219959811}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 6998}, ru_stime={0, 5999}, ...}) = 0
+gettimeofday({1418465025, 948434}, NULL) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 220410692}) = 0
+select(1024, [4 6 7 8 9 12], [], [], {0, 31395}) = 1 (in [12], left {0, 31388})
+clock_gettime(CLOCK_MONOTONIC, {4034145, 220570951}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 220603222}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 6998}, ru_stime={0, 5999}, ...}) = 0
+gettimeofday({1418465025, 948864}, NULL) = 0
+time(NULL)                              = 1418465025
+recv(12, "\n\0\0\0\0\0\0\10", 8, MSG_WAITALL|MSG_NOSIGNAL) = 8
+time(NULL)                              = 1418465025
+time(NULL)                              = 1418465025
+gettimeofday({1418465025, 949050}, NULL) = 0
+write(1, "2014/12/13 03:03:45 BGP: *** Rec"..., 722014/12/13 03:03:45 BGP: *** Received SRx Synchronization Request! ***
+
+) = 72
+time(NULL)                              = 1418465025
+clock_gettime(CLOCK_MONOTONIC, {4034145, 222728409}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 6998}, ru_stime={0, 5999}, ...}) = 0
+gettimeofday({1418465025, 951054}, NULL) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 222914879}) = 0
+select(1024, [4 6 7 8 9 12], [], [], {0, 28891}) = 0 (Timeout)
+clock_gettime(CLOCK_MONOTONIC, {4034145, 252087129}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 252158601}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 6998}, ru_stime={0, 5999}, ...}) = 0
+gettimeofday({1418465025, 980471}, NULL) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 252394440}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 252456743}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 6998}, ru_stime={0, 5999}, ...}) = 0
+gettimeofday({1418465025, 980771}, NULL) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034145, 252620022}) = 0
+select(1024, [4 6 7 8 9 12], [], [], {6, 948771}) = 0 (Timeout)
+clock_gettime(CLOCK_MONOTONIC, {4034152, 208961879}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 209295538}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 7998}, ru_stime={0, 5999}, ...}) = 0
+gettimeofday({1418465032, 938161}, NULL) = 0
+gettimeofday({1418465032, 938333}, NULL) = 0
+stat64("/etc/localtime", {st_mode=S_IFREG|0644, st_size=2427, ...}) = 0
+write(1, "2014/12/13 03:03:52 BGP: 10.1.1."..., 682014/12/13 03:03:52 BGP: 10.1.1.3 [FSM] Timer (start timer expire).
+) = 68
+gettimeofday({1418465032, 940819}, NULL) = 0
+write(1, "2014/12/13 03:03:52 BGP: 10.1.1."..., 662014/12/13 03:03:52 BGP: 10.1.1.3 [FSM] BGP_Start (Idle->Connect)
+) = 66
+socket(PF_INET, SOCK_STREAM, IPPROTO_IP) = 13
+setsockopt(13, SOL_IP, IP_TTL, [255], 4) = 0
+setsockopt(13, SOL_SOCKET, SO_REUSEADDR, [1], 4) = 0
+setresuid32(-1, 0, -1)                  = 0
+setsockopt(13, SOL_IP, IP_TOS, [192], 4) = 0
+setresuid32(-1, 0, -1)                  = 0
+gettimeofday({1418465032, 960952}, NULL) = 0
+write(1, "2014/12/13 03:03:52 BGP: 10.1.1."..., 742014/12/13 03:03:52 BGP: 10.1.1.3 [Event] Connect start to 10.1.1.3 fd 13
+) = 74
+fcntl64(13, F_GETFL)                    = 0x2 (flags O_RDWR)
+fcntl64(13, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+connect(13, {sa_family=AF_INET, sin_port=htons(179), sin_addr=inet_addr("10.1.1.3")}, 16) = -1 EINPROGRESS (Operation now in progress)
+fcntl64(13, F_SETFL, O_RDWR)            = 0
+gettimeofday({1418465032, 963023}, NULL) = 0
+write(1, "2014/12/13 03:03:52 BGP: 10.1.1."..., 762014/12/13 03:03:52 BGP: 10.1.1.3 [FSM] Non blocking connect waiting result
+) = 76
+clock_gettime(CLOCK_MONOTONIC, {4034152, 240291984}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 240532298}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 6998}, ...}) = 0
+gettimeofday({1418465032, 969212}, NULL) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 241148099}) = 0
+select(1024, [4 6 7 8 9 12 13], [13], [], {2, 966831}) = 1 (out [13], left {2, 966827})
+clock_gettime(CLOCK_MONOTONIC, {4034152, 241284602}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 241324029}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 6998}, ...}) = 0
+gettimeofday({1418465032, 969580}, NULL) = 0
+getsockopt(13, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 241447394}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 6998}, ...}) = 0
+gettimeofday({1418465032, 969696}, NULL) = 0
+select(1024, [4 6 7 8 9 12], [], [], {0, 0}) = 0 (Timeout)
+clock_gettime(CLOCK_MONOTONIC, {4034152, 241546381}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 241566528}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 6998}, ...}) = 0
+gettimeofday({1418465032, 969803}, NULL) = 0
+gettimeofday({1418465032, 969822}, NULL) = 0
+write(1, "2014/12/13 03:03:52 BGP: 10.1.1."..., 802014/12/13 03:03:52 BGP: 10.1.1.3 [FSM] TCP_connection_open (Connect->OpenSent)
+) = 80
+getsockname(13, {sa_family=AF_INET, sin_port=htons(41730), sin_addr=inet_addr("10.1.1.2")}, [16]) = 0
+getpeername(13, {sa_family=AF_INET, sin_port=htons(179), sin_addr=inet_addr("10.1.1.3")}, [16]) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 243235405}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 243260993}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 6998}, ...}) = 0
+gettimeofday({1418465032, 971504}, NULL) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 243323872}) = 0
+select(1024, [4 6 7 8 9 12 13], [13], [], {2, 964656}) = 1 (out [13], left {2, 964653})
+clock_gettime(CLOCK_MONOTONIC, {4034152, 243378417}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 243396742}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 6998}, ...}) = 0
+gettimeofday({1418465032, 971631}, NULL) = 0
+setsockopt(13, SOL_TCP, TCP_CORK, [1], 4) = 0
+write(13, "\377\377\377\377\377\377\377\377\377\377\377\377\377\377\377\377\0C\1\4\352b\0\264\n\1\1\2&\2\6\1"..., 67) = 67
+setsockopt(13, SOL_TCP, TCP_CORK, [0], 4) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 243527178}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 6998}, ...}) = 0
+gettimeofday({1418465032, 971762}, NULL) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 243581095}) = 0
+select(1024, [4 6 7 8 9 12 13], [], [], {2, 964398}) = 1 (in [13], left {2, 964096})
+clock_gettime(CLOCK_MONOTONIC, {4034152, 244012284}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 244057077}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 6998}, ...}) = 0
+gettimeofday({1418465032, 972335}, NULL) = 0
+read(13, "\377\377\377\377\377\377\377\377\377\377\377\377\377\377\377\377\0C\1", 19) = 19
+read(13, "\4\352c\0\264\n\1\1\3&\2\6\1\4\0\1\0\1\2\2\200\0\2\2\2\0\2\6A\4\0\0"..., 48) = 48
+gettimeofday({1418465032, 972422}, NULL) = 0
+write(1, "2014/12/13 03:03:52 BGP: [BGPSEC"..., 652014/12/13 03:03:52 BGP: [BGPSEC] ------- BGPSEC section -------
+) = 65
+gettimeofday({1418465032, 974126}, NULL) = 0
+write(1, "2014/12/13 03:03:52 BGP: [BGPSEC"..., 942014/12/13 03:03:52 BGP: [BGPSEC] 10.1.1.3 capability code: 72 length:3 version_dir:08 afi:01
+) = 94
+gettimeofday({1418465032, 975809}, NULL) = 0
+write(1, "2014/12/13 03:03:52 BGP: [BGPSEC"..., 652014/12/13 03:03:52 BGP: [BGPSEC] ------- BGPSEC section -------
+) = 65
+gettimeofday({1418465032, 977424}, NULL) = 0
+write(1, "2014/12/13 03:03:52 BGP: [BGPSEC"..., 942014/12/13 03:03:52 BGP: [BGPSEC] 10.1.1.3 capability code: 72 length:3 version_dir:00 afi:01
+) = 94
+gettimeofday({1418465032, 979117}, NULL) = 0
+write(1, "2014/12/13 03:03:52 BGP: [BGPSEC"..., 542014/12/13 03:03:52 BGP: [BGPSEC] Capability RECV set
+) = 54
+getsockname(13, {sa_family=AF_INET, sin_port=htons(41730), sin_addr=inet_addr("10.1.1.2")}, [16]) = 0
+getpeername(13, {sa_family=AF_INET, sin_port=htons(179), sin_addr=inet_addr("10.1.1.3")}, [16]) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 265547294}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 7998}, ...}) = 0
+gettimeofday({1418465032, 993814}, NULL) = 0
+select(1024, [4 6 7 8 9 12 13], [], [], {0, 0}) = 1 (in [13], left {0, 0})
+clock_gettime(CLOCK_MONOTONIC, {4034152, 265670287}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 265690559}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 7998}, ...}) = 0
+gettimeofday({1418465032, 993929}, NULL) = 0
+gettimeofday({1418465032, 993950}, NULL) = 0
+write(1, "2014/12/13 03:03:52 BGP: 10.1.1."..., 852014/12/13 03:03:52 BGP: 10.1.1.3 [FSM] Receive_OPEN_message (OpenSent->OpenConfirm)
+) = 85
+gettimeofday({1418465032, 995344}, NULL) = 0
+write(1, "2014/12/13 03:03:52 BGP: 10.1.1."..., 522014/12/13 03:03:52 BGP: 10.1.1.3 sending KEEPALIVE
+) = 52
+clock_gettime(CLOCK_MONOTONIC, {4034152, 268797790}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 268838744}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 268871887}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 8998}, ...}) = 0
+gettimeofday({1418465032, 997130}, NULL) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 268950743}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 8998}, ...}) = 0
+gettimeofday({1418465032, 997187}, NULL) = 0
+read(13, "\377\377\377\377\377\377\377\377\377\377\377\377\377\377\377\377\0\23\4", 19) = 19
+gettimeofday({1418465032, 997236}, NULL) = 0
+write(1, "2014/12/13 03:03:52 BGP: 10.1.1."..., 492014/12/13 03:03:52 BGP: 10.1.1.3 KEEPALIVE rcvd
+) = 49
+clock_gettime(CLOCK_MONOTONIC, {4034152, 290407138}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 8998}, ...}) = 0
+gettimeofday({1418465033, 18660}, NULL) = 0
+select(1024, [4 6 7 8 9 12 13], [13], [], {0, 0}) = 1 (out [13], left {0, 0})
+clock_gettime(CLOCK_MONOTONIC, {4034152, 290518477}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 290538740}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 8998}, ...}) = 0
+gettimeofday({1418465033, 18775}, NULL) = 0
+gettimeofday({1418465033, 18793}, NULL) = 0
+stat64("/etc/localtime", {st_mode=S_IFREG|0644, st_size=2427, ...}) = 0
+write(1, "2014/12/13 03:03:53 BGP: 10.1.1."..., 932014/12/13 03:03:53 BGP: 10.1.1.3 [FSM] Receive_KEEPALIVE_message (OpenConfirm->Established)
+) = 93
+clock_gettime(CLOCK_MONOTONIC, {4034152, 292242681}) = 0
+gettimeofday({1418465033, 20479}, NULL) = 0
+write(1, "2014/12/13 03:03:53 BGP: 10.1.1."..., 522014/12/13 03:03:53 BGP: 10.1.1.3 sending KEEPALIVE
+) = 52
+clock_gettime(CLOCK_MONOTONIC, {4034152, 293785915}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 293811350}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 8998}, ...}) = 0
+gettimeofday({1418465033, 22047}, NULL) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 293866759}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 8998}, ...}) = 0
+gettimeofday({1418465033, 22101}, NULL) = 0
+setsockopt(13, SOL_TCP, TCP_CORK, [1], 4) = 0
+write(13, "\377\377\377\377\377\377\377\377\377\377\377\377\377\377\377\377\0\23\4", 19) = 19
+write(13, "\377\377\377\377\377\377\377\377\377\377\377\377\377\377\377\377\0\23\4", 19) = 19
+setsockopt(13, SOL_TCP, TCP_CORK, [0], 4) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 294016920}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 8998}, ...}) = 0
+gettimeofday({1418465033, 22252}, NULL) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 294070966}) = 0
+select(1024, [4 6 7 8 9 12 13], [], [], {0, 999715}) = 1 (in [13], left {0, 999591})
+clock_gettime(CLOCK_MONOTONIC, {4034152, 294260574}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 294286044}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 8998}, ...}) = 0
+gettimeofday({1418465033, 22522}, NULL) = 0
+read(13, "\377\377\377\377\377\377\377\377\377\377\377\377\377\377\377\377\0\23\4", 19) = 19
+gettimeofday({1418465033, 22561}, NULL) = 0
+write(1, "2014/12/13 03:03:53 BGP: 10.1.1."..., 492014/12/13 03:03:53 BGP: 10.1.1.3 KEEPALIVE rcvd
+) = 49
+clock_gettime(CLOCK_MONOTONIC, {4034152, 307081042}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 8998}, ...}) = 0
+gettimeofday({1418465033, 35333}, NULL) = 0
+select(1024, [4 6 7 8 9 12 13], [], [], {0, 0}) = 0 (Timeout)
+clock_gettime(CLOCK_MONOTONIC, {4034152, 307185203}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 307204990}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 8998}, ...}) = 0
+gettimeofday({1418465033, 35441}, NULL) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 307261309}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 307279305}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 8998}, ...}) = 0
+gettimeofday({1418465033, 35513}, NULL) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034152, 307332448}) = 0
+select(1024, [4 6 7 8 9 12 13], [], [], {0, 986453}) = 0 (Timeout)
+clock_gettime(CLOCK_MONOTONIC, {4034153, 295210094}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034153, 295544923}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 9998}, ...}) = 0
+gettimeofday({1418465034, 24401}, NULL) = 0
+gettimeofday({1418465034, 24568}, NULL) = 0
+stat64("/etc/localtime", {st_mode=S_IFREG|0644, st_size=2427, ...}) = 0
+write(1, "2014/12/13 03:03:54 BGP: 10.1.1."..., 702014/12/13 03:03:54 BGP: 10.1.1.3 [FSM] Timer (routeadv timer expire)
+) = 70
+clock_gettime(CLOCK_MONOTONIC, {4034153, 298241841}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034153, 298439253}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034153, 298532922}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 9998}, ...}) = 0
+gettimeofday({1418465034, 27022}, NULL) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034153, 298909351}) = 0
+select(1024, [4 6 7 8 9 12 13], [13], [], {1, 909070}) = 1 (out [13], left {1, 909065})
+clock_gettime(CLOCK_MONOTONIC, {4034153, 299204229}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4034153, 299292238}) = 0
+getrusage(RUSAGE_SELF, {ru_utime={0, 8998}, ru_stime={0, 9998}, ...}) = 0
+gettimeofday({1418465034, 27769}, NULL) = 0
+gettimeofday({1418465034, 27862}, NULL) = 0
+write(1, "2014/12/13 03:03:54 BGP: [BGPSEC"..., 1202014/12/13 03:03:54 BGP: [BGPSEC] [bgp_update_packet] stream remain:4096 prefix size: 3 rn->p:001e000a attr:0xb93041a0 
+) = 120
+gettimeofday({1418465034, 29772}, NULL) = 0
+write(1, "2014/12/13 03:03:54 BGP: [BGPSEC"..., 1242014/12/13 03:03:54 BGP: [BGPSEC] [bgp_packet_attribute] ASPATH test: attr->aspath:0xb931b2f8, attr->aspath->segments:(nil)
+) = 124
+gettimeofday({1418465034, 43078}, NULL) = 0
+write(1, "2014/12/13 03:03:54 BGP: [BGPSEC"..., 982014/12/13 03:03:54 BGP: [BGPSEC] new-[segment:0xb93042d0] seg length:1 type:2 ref counter:0 str:
+) = 98
+gettimeofday({1418465034, 44830}, NULL) = 0
+write(1, "2014/12/13 03:03:54 BGP: [BGPSEC"..., 552014/12/13 03:03:54 BGP: [BGPSEC] new - as[0] : 60002 
+) = 55
+gettimeofday({1418465034, 58952}, NULL) = 0
+write(1, "2014/12/13 03:03:54 BGP: [BGPSEC"..., 1132014/12/13 03:03:54 BGP: [BGPSEC]  ++++++++[bgp_packet_attribute]: ATTRIBUTE: attr:0xb93041a0 aspath:0xb931b2f8 
+) = 113
+gettimeofday({1418465034, 60704}, NULL) = 0
+write(1, "2014/12/13 03:03:54 BGP: [BGPSEC"..., 952014/12/13 03:03:54 BGP: [BGPSEC] original (attr->aspath):as_segment_length:0 aspath_refcnt: 2
+) = 95
+gettimeofday({1418465034, 62461}, NULL) = 0
+write(1, "2014/12/13 03:03:54 BGP: [BGPSEC"..., 582014/12/13 03:03:54 BGP: [BGPSEC] BGPSEC_PATH_ATTR: (nil)
+) = 58
+gettimeofday({1418465034, 68271}, NULL) = 0
+write(1, "2014/12/13 03:03:54 BGP: [BGPSEC"..., 962014/12/13 03:03:54 BGP: [BGPSEC] [bgp_packet_attribute] attr->aspath:0xb931b2f8 segments:(nil)
+) = 96
+gettimeofday({1418465034, 70207}, NULL) = 0
+write(1, "2014/12/13 03:03:54 BGP: [OUT] d"..., 952014/12/13 03:03:54 BGP: [OUT] duplicated bgpsec_aspath:0xb931bb38 aspath->segments:0xb93042f0
+) = 95
+gettimeofday({1418465034, 83890}, NULL) = 0
+write(1, "2014/12/13 03:03:54 BGP: [OUT] a"..., 952014/12/13 03:03:54 BGP: [OUT] aspath[0xb931bb38] segments length: 1 type:2 ref counter:0 str:
+) = 95
+gettimeofday({1418465034, 85686}, NULL) = 0
+write(1, "2014/12/13 03:03:54 BGP: [OUT] a"..., 542014/12/13 03:03:54 BGP: [OUT] as : 60002 -1219271664
+) = 54
+gettimeofday({1418465034, 87443}, NULL) = 0
+write(1, "2014/12/13 03:03:54 BGP: [OUT] A"..., 682014/12/13 03:03:54 BGP: [OUT] ATTR:cp[49]: 0x1E FLAG:cp[48]: 0x90 
+) = 68
+gettimeofday({1418465034, 93264}, NULL) = 0
+write(1, "2014/12/13 03:03:54 BGP: [OUT] +"..., 832014/12/13 03:03:54 BGP: [OUT] ++ origin AS: 60002 remote AS:60003 local AS: 60002
+) = 83
+gettimeofday({1418465034, 95030}, NULL) = 0
+write(1, "2014/12/13 03:03:54 BGP: [OUT] p"..., 952014/12/13 03:03:54 BGP: [OUT] prefix_length: 23 psize: 3, prefix: 0x0000000a prefix4:001e000a
+) = 95
+--- SIGSEGV {si_signo=SIGSEGV, si_code=SEGV_MAPERR, si_addr=0} ---
+time(NULL)                              = 1418465034
+open("/var/tmp/quagga.bgpd.crashlog", O_WRONLY|O_CREAT|O_EXCL|O_LARGEFILE, 0644) = -1 EEXIST (File exists)
+write(1, "BGP: Received signal 11 at 14184"..., 65BGP: Received signal 11 at 1418465034 (si_addr 0x0); aborting...
+) = 65
+futex(0xb7537e14, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0xb755561c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+open("/var/tmp/quagga.bgpd.crashlog", O_WRONLY|O_CREAT|O_EXCL|O_LARGEFILE, 0644) = -1 EEXIST (File exists)
+write(1, "Backtrace for 0 stack frames:\n", 30Backtrace for 0 stack frames:
+) = 30
+rt_sigprocmask(SIG_UNBLOCK, [ABRT], NULL, 8) = 0
+tgkill(18500, 18500, SIGABRT)           = 0
+--- SIGABRT {si_signo=SIGABRT, si_code=SI_TKILL, si_pid=18500, si_uid=0} ---
++++ killed by SIGABRT +++
