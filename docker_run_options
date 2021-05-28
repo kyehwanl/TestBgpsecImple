@@ -1,0 +1,5 @@
+
+1. docker run options
+=====================
+
+    docker run --rm -it -v /opt/project/TestBgpsecImple:/etc/configs --cap-add=NET_ADMIN kyehwanl/srxsuite_gl bash
